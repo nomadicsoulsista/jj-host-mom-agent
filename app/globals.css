@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbf9fa;
+  --foreground: #161616;
+  --jj-blue: #9dc3e6;
+  --jj-blue-deep: #4a7fb3;
+  --jj-pink: #d4a5c0;
+  --jj-pink-deep: #a8678f;
+  --card: #ffffff;
+  --line: #e8e1e5;
+  --muted: #6b6468;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-jj-blue: var(--jj-blue);
+  --color-jj-blue-deep: var(--jj-blue-deep);
+  --color-jj-pink: var(--jj-pink);
+  --color-jj-pink-deep: var(--jj-pink-deep);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+h1, h2, h3, .serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.prose-jj h1 { font-size: 1.9rem; font-weight: 600; margin: 1.2rem 0 0.4rem; line-height: 1.15; }
+.prose-jj h2 { font-size: 1.35rem; font-weight: 600; margin: 1.3rem 0 0.4rem; color: var(--jj-blue-deep); }
+.prose-jj h3 { font-size: 1.15rem; font-weight: 600; margin: 1rem 0 0.3rem; }
+.prose-jj p { margin: 0.5rem 0; line-height: 1.6; }
+.prose-jj ul, .prose-jj ol { margin: 0.4rem 0 0.6rem 1.3rem; line-height: 1.55; }
+.prose-jj ul { list-style: disc; }
+.prose-jj ol { list-style: decimal; }
+.prose-jj li { margin: 0.15rem 0; }
+.prose-jj strong { font-weight: 600; }
+.prose-jj hr { border: 0; border-top: 1px solid var(--line); margin: 1rem 0; }
+.prose-jj table { border-collapse: collapse; width: 100%; margin: 0.6rem 0; font-size: 0.93rem; }
+.prose-jj th, .prose-jj td { border: 1px solid var(--line); padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+.prose-jj th { background: #f3eef1; font-weight: 600; }
+.prose-jj blockquote { border-left: 3px solid var(--jj-pink); padding-left: 0.8rem; color: var(--muted); margin: 0.6rem 0; }
+.prose-jj code { background: #f3eef1; padding: 0.1rem 0.3rem; border-radius: 4px; font-size: 0.9em; }
+
+@media print {
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  .print-sheet { box-shadow: none !important; border: 0 !important; }
+  @page { margin: 0.7in; }
+}
+.print-only { display: none; }
